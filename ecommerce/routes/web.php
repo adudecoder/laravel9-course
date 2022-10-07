@@ -13,6 +13,20 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/request', function(\Illuminate\Http\Request $request) {
+
+    $r = $request->whenHas('keyword', function($input) {
+        dd('x', $input);
+    });
+
+    if ($r) {
+        dd('Faça alguma coisa');
+    }
+
+    dd($r);
+    return 'X';
+});
+
 Route::get('user/{user}', function(\App\Models\User $user) {
     dd($user);
     return $user;
