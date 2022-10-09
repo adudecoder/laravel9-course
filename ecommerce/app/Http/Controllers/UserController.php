@@ -7,9 +7,11 @@ use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
-    public function show(User $user, Request $request)
+    public function show(User $user)
     {
-        dd($request->header());
-        return $user;
+        return view('user', [
+            'name' => 'Victor',
+            'user' => $user
+        ]);
     }
 }
