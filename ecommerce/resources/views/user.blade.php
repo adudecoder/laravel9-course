@@ -1,13 +1,27 @@
-<h1>
-    Hello World
-</h1>
+@extends('layouts.default')
 
-{{ $user->name }} <br>
-{{ $user->email }} <br>
+@section('title', 'User title')
 
-<br>
+@section('sidebar')
+    <div>
+        <nav>
+            sidebar de user
+        </nav>
+    </div>
+@endsection
 
-{{ date('d/m/y') }}
+@section('content')
+    <h1>
+        Hello World
+    </h1>
+
+    {{ $user->name }} <br>
+    {{ $user->email }} <br>
+@endsection
+
+{{-- <br> --}}
+
+{{-- {{ date('d/m/y') }}
 
 <br>
 
@@ -15,28 +29,28 @@
     $amount = 100;
     $array = [];
     $boolean = true;
-@endphp
+@endphp --}}
 
 {{-- Unless --}}
-@unless ($boolean)
+{{-- @unless($boolean)
     Falso
 @endunless
-<br><br>
+<br><br> --}}
 
 {{-- If --}}
-@if ($boolean)
+{{-- @if ($boolean)
     True
-@endif
+@endif --}}
 
-@empty($array)
+{{-- @empty($array)
    o array está vazio
-@endempty
+@endempty --}}
 
 {{-- If --}}
-@if ($amount > 100)
+{{-- @if ($amount > 100)
     Muito caro
     @elseif($amount > 80)
     Ta ok
     @elseif($amount > 50)
     Ta barato
-@endif
+@endif --}}
