@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BusinessController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -15,6 +16,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 // Calling the controller, and passing a method as the second parameter
+Route::get('business', [BusinessController::class, 'index']);
 Route::get('user/{user}', [UserController::class, 'show'])->name('user.show');
 Route::get('users', [UserController::class, 'index'])->name('user.index');
 
