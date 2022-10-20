@@ -21,15 +21,16 @@ class BusinessController extends Controller
         // $businessAll->address = 'Quadra c rua B';
         // $businessAll->save();
 
-        $input = [
-            'name' => 'Victor2',
-            'email' => 'victor2@gmail.com',
-            'address' => 'rua dos doidos2'
-        ];
+        // $input = [
+        //     'name' => 'Victor2',
+        //     'email' => 'victor2@gmail.com',
+        //     'address' => 'rua dos doidos2'
+        // ];
 
         $businessAll = Business::find(1);
-        $businessAll->fill($input);
-        $businessAll->save();
+        $businessAll->delete();
+        // $businessAll->fill($input);
+        // $businessAll->save();
 
         dd($businessAll);
     }
