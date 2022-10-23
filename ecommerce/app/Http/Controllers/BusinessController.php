@@ -11,11 +11,10 @@ class BusinessController extends Controller
     public function index()
     {
 
-        $businesses = Business::all();
+        $businesses = Business::paginate();
         return view('businesses', [
             'businesses' => $businesses
         ]);
-
     }
 
     public function store(Request $request)

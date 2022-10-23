@@ -15,6 +15,6 @@ class BusinessSeeder extends Seeder
      */
     public function run()
     {
-        Business::factory(2)->create();
+        Business::factory(100)->create();
     }
 }

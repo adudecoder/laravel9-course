@@ -43,5 +43,11 @@
         {{ $business->name }} {{ $business->email }}<br>
     @endforeach
 
-    {{-- {{ dd($businesses) }} --}}
+    {{ $businesses->onEachSide(2)->links() }}
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
 @endsection
